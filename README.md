@@ -24,3 +24,14 @@
   * Python Debugger from Microsoft
 * Setup the **Python Profile**. How?
   * What is profile? <https://code.visualstudio.com/docs/editor/profiles>
+
+## Steps
+
+* `python -m venv venv`
+* `venv\Scripts\activate.bat`
+* `pip install typer`
+* `pip install pymupdf`
+* `pip install pandas`
+* `pip install openpyxl`
+* `pip freeze > requirements.txt`
+* `pip install -r requirements.txt`
