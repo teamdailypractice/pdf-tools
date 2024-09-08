@@ -24,6 +24,7 @@
   * Python Debugger from Microsoft
 * Setup the **Python Profile**. How?
   * What is profile? <https://code.visualstudio.com/docs/editor/profiles>
+* C + S + P -> Select Interpreter
 
 ## Steps
 
