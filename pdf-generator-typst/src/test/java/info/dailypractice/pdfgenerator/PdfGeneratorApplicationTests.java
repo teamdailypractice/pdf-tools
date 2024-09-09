@@ -1,4 +1,4 @@
-package com.dailypractice.info.pdf_generator;
+package com.dailypractice.info.pdfgenerator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

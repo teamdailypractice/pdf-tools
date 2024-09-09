@@ -1,0 +1,10 @@
+[
+  {
+    "pageHeading": "Addition",
+    "templateFilename": "D:/git/pdf-tools/pdf-generator/data-in/templates/html.ftl",
+    "outputFilename": "D:/git/pdf-tools/pdf-generator/data-out/addition.html",
+    "imageFilename": "images/img_addition_01.png",
+    "category": "simple",
+    "inputMode": "numeric"
+  }
+]
