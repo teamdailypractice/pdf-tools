@@ -1,11 +1,9 @@
 package info.dailypractice.pdfgenerator;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateExceptionHandler;
-import info.dailypractice.pdfgenerator.PageConfigurationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
@@ -16,7 +14,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.MessageFormat;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @ShellComponent
@@ -46,11 +46,11 @@ public class TypstFileGenerator {
     }
 
     private void doProcess(BookConfiguration bc) throws TemplateException, IOException {
-        validatePageConfiguration(bc);
+        validateBookConfiguration(bc);
         generateTypstFile(bc);
     }
 
-    private static void validatePageConfiguration(BookConfiguration bc) throws FileNotFoundException {
+    private static void validateBookConfiguration(BookConfiguration bc) throws FileNotFoundException {
         if (!Files.exists(Path.of(bc.getTemplateFileAbsolutePath()))) {
             System.out.println("File does not exist: " + bc.getTemplateFileAbsolutePath());
             throw new FileNotFoundException(bc.getTemplateFileAbsolutePath());
@@ -76,8 +76,21 @@ public class TypstFileGenerator {
              OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream, StandardCharsets.UTF_8)) {
             String information = MessageFormat.format("Processing template for: {0} -  Output File: {1}", bc.getBookName(), bc.getOutputFileAbsolutePath());
             System.out.println(information);
+            Book book = new Book();
+            book.addBookPages();
+            List<BookPage> bookPages = book.getBookPages();
+            for (BookPage p: bookPages) {
+                ArrayList<ArrayList<String>> contents = p.getContents();
+                for (int i = 0; i < contents.size(); i++) {
+                    ArrayList<String> strings = contents.get(i);
+                    strings.get(0);
+                    strings.get(1);
+                }
+            }
             Map data = new HashMap();
             data.put("bc", bc);
+            data.put("data", new int[] {100,200,300});
+            data.put("book", book);
             temp.process(data, outputStreamWriter);
         }
     }
