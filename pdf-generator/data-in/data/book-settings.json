@@ -1,0 +1,7 @@
+[
+  {
+    "bookName": "thirukkural",
+    "templateFileAbsolutePath": "D:/git/pdf-tools/pdf-generator/data-in/templates/thirukkural/book.ftl",
+    "outputFileAbsolutePath": "D:/git/pdf-tools/pdf-generator/data-out/thirukkural.typ"
+  }
+]

@@ -26,4 +26,11 @@ public class MyAppConfiguration {
         return new PageConfigurationProvider();
     }
 
+    @Bean
+    @ConditionalOnMissingBean
+    @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
+    public BookConfigurationProvider bookConfigurationProvider() {
+        return new BookConfigurationProvider();
+    }
+
 }

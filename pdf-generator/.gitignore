@@ -1,7 +1,7 @@
 data-out
 *.log
 
-HELP.md
+readme.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
