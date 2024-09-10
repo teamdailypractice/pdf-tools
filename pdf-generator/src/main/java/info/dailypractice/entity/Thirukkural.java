@@ -12,7 +12,8 @@ public class Thirukkural {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
+
     private int kural_id;
     private String line1;
     private String line2;
@@ -20,11 +21,11 @@ public class Thirukkural {
     public Thirukkural() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
