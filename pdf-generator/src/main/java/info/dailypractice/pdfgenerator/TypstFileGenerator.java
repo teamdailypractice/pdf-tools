@@ -79,19 +79,37 @@ public class TypstFileGenerator {
             Book book = new Book();
             book.addBookPages();
             List<BookPage> bookPages = book.getBookPages();
-            for (BookPage p: bookPages) {
-                ArrayList<ArrayList<String>> contents = p.getContents();
-                for (int i = 0; i < contents.size(); i++) {
-                    ArrayList<String> strings = contents.get(i);
-                    strings.get(0);
-                    strings.get(1);
-                }
-            }
+//            bookContentAsList(bookPages);
+            bookContentAsMap(bookPages);
             Map data = new HashMap();
             data.put("bc", bc);
             data.put("data", new int[] {100,200,300});
             data.put("book", book);
+            data.put("bookContents", book);
             temp.process(data, outputStreamWriter);
         }
     }
+
+    private static void bookContentAsList(List<BookPage> bookPages) {
+        for (BookPage p: bookPages) {
+            ArrayList<ArrayList<String>> contents = p.getContents();
+            for (int i = 0; i < contents.size(); i++) {
+                ArrayList<String> strings = contents.get(i);
+                strings.get(0);
+                strings.get(1);
+            }
+        }
+    }
+    private static void bookContentAsMap(List<BookPage> bookPages) {
+        for (BookPage p: bookPages) {
+            List<Map<String, String>> lineNumberContentMapList = p.getLineNumberContentMapList();
+            for (int i = 0; i < lineNumberContentMapList.size(); i++) {
+                Map<String, String> integerStringMap = lineNumberContentMapList.get(0);
+                System.out.println(integerStringMap.get("lineNumber"));
+                System.out.println(integerStringMap.get("a1"));
+                System.out.println(integerStringMap.get("a2"));
+            }
+        }
+    }
 }
+
