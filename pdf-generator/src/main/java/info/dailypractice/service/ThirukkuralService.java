@@ -14,19 +14,19 @@ public class ThirukkuralService {
     @Autowired
     private ThirukkuralRepository thirukkuralRepository;
 
-    public List<Thirukkural> getAllUsers() {
+    public List<Thirukkural> getAllThirukkural() {
         return thirukkuralRepository.findAll();
     }
 
-    public Thirukkural getUserById(Integer id) {
+    public Thirukkural getThirukkuralById(Integer id) {
         return thirukkuralRepository.findById(id).orElse(null);
     }
 
-    public Thirukkural saveUser(Thirukkural user) {
-        return thirukkuralRepository.save(user);
+    public Thirukkural saveThirukkural(Thirukkural thirukkural) {
+        return thirukkuralRepository.save(thirukkural);
     }
 
-    public void deleteUser(Integer id) {
+    public void deleteThirukkural(Integer id) {
         thirukkuralRepository.deleteById(id);
     }
 }
