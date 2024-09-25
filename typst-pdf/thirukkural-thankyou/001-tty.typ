@@ -18,6 +18,7 @@
 2. #link("https://www.tamilvu.org/library/l2100/html/l2100ind.htm")[தமிழ் இணையக் கல்விக்கழகம் - திருக்குறள்]
 3. #link("https://www.tamildigitallibrary.in/")[தமிழிணையம் - மின்னூலகம்]
 4. #link("https://www.projectmadurai.org/pmworks.html")[மதுரை தமிழ் இலக்கிய மின்தொகுப்புத் திட்டம்]
+5. #link("https://www.azhagi.com/")[அழகி - மென்பொருள் செயலி]
 \
 
 இந்த முயற்சி, அனைவரும் திருக்குறளை\
