@@ -48,3 +48,5 @@ typst compile %FILENAME%.typ %OUTPUT_PATH%\%FILENAME%.pdf  --root %PROJECT_ROOT%
 * Check the count `ls -l  muva_urai_1???.txt  | wc -l`
 * powershell `copy-item D:\git\spring-boot-learning\data-jpa-sqlite\data-out\thirukkural-muva-urai.typ D:\git\pdf-tools\typst-pdf\examples\a61.typ
 `
+
+https://www.tamilvu.org/library/l2100/html/l2100ind.htm
